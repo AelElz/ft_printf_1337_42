@@ -6,7 +6,7 @@
 /*   By: aelelz <aelelz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 18:41:04 by aelelz            #+#    #+#             */
-/*   Updated: 2024/11/16 18:51:07 by aelelz           ###   ########.fr       */
+/*   Updated: 2024/11/16 18:52:32 by aelelz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ void    ft_hex(unsigned int num, const char format)
 int ft_print_hex(unsigned int num, const char format)
 {
     if (num == 0)
-        return (ft_putchar_fd("0", 1));
+        return (write (1, "0", 1));
     else
         ft_hex(num , format);
     return (ft_hex_count(num));
