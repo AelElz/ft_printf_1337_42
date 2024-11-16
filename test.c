@@ -6,7 +6,7 @@
 /*   By: aelelz <aelelz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 18:49:55 by aelelz            #+#    #+#             */
-/*   Updated: 2024/11/16 16:49:45 by aelelz           ###   ########.fr       */
+/*   Updated: 2024/11/16 18:49:36 by aelelz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ int	ft_print_hex(unsigned int num, const char format)
 		ft_put_hex(num, format);
 	return (ft_hex_len(num));
 }
-int main(void)
+/*int main(void)
 {
     unsigned int num1 = 255;      // Example decimal number
     unsigned int num2 = 4095;     // Example larger decimal number
@@ -85,4 +85,4 @@ int main(void)
     printf(" (Length: %d)\n", length);
 
     return 0;
-}
+}*/
