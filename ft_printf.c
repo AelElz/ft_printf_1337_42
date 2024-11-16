@@ -6,7 +6,7 @@
 /*   By: aelelz <aelelz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 13:35:50 by ael-azha          #+#    #+#             */
-/*   Updated: 2024/11/15 16:23:22 by aelelz           ###   ########.fr       */
+/*   Updated: 2024/11/16 18:26:31 by aelelz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,26 @@
 
 int	ft_printf(const char *format, ...)
 {
-	
+    va_list args;
+    int i;
+
+    if(!format)
+        return (-1);
+    va_start(args, format);
+    i = 0;
+    while (format[i])
+    {
+        if (format[i] == '%' && format[i] != '\0')
+        {
+            
+        }
+    }
+    
 }
 /*
-%c = ft_putchar
-%d && %i = ft_putnbr
-%
+ft_puthex_pf()
+ft_putnbr_pf()
+ft_putpoint_pf()
+ft_putstr_pf()
+ft_putunsi_pf()
 */
