@@ -6,7 +6,7 @@
 /*   By: aelelz <aelelz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 15:26:05 by aelelz            #+#    #+#             */
-/*   Updated: 2024/11/17 16:27:10 by aelelz           ###   ########.fr       */
+/*   Updated: 2024/11/17 18:11:07 by aelelz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,8 @@ int	ft_print_str(char	*s)
 	i = 0;
 	if (s == NULL)
 	{
-		write (1, "null", 4);
-		return (4);
+		write (1, "(null)", 6);
+		return (6);
 	}
 	while (s[i])
 	{
