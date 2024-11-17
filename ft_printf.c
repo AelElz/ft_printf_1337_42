@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ael-azha <ael-azha@student.42.fr>          +#+  +:+       +#+        */
+/*   By: aelelz <aelelz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 13:35:50 by ael-azha          #+#    #+#             */
-/*   Updated: 2024/11/17 16:06:52 by ael-azha         ###   ########.fr       */
+/*   Updated: 2024/11/17 16:24:14 by aelelz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include "libft.h"
 
 void    ft_check(const char *str, va_list args)
 {   

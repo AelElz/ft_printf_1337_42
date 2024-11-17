@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ael-azha <ael-azha@student.42.fr>          +#+  +:+       +#+        */
+/*   By: aelelz <aelelz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 20:32:14 by ael-azha          #+#    #+#             */
-/*   Updated: 2024/11/17 16:07:47 by ael-azha         ###   ########.fr       */
+/*   Updated: 2024/11/17 16:26:50 by aelelz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,9 @@
 
 # include <stdarg.h>
 # include <unistd.h>
+# include <stdlib.h>
 # include <stdio.h>
+# include "./libft/libft.h"
 
 int	ft_printf(const char *format, ...);
 int ft_print_hex(unsigned int num, const char format);

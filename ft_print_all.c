@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_all.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ael-azha <ael-azha@student.42.fr>          +#+  +:+       +#+        */
+/*   By: aelelz <aelelz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 15:26:05 by aelelz            #+#    #+#             */
-/*   Updated: 2024/11/17 16:11:35 by ael-azha         ###   ########.fr       */
+/*   Updated: 2024/11/17 16:27:10 by aelelz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include "libft.h"
 
 int	ft_putchar_pf(int c)
 {
@@ -38,12 +37,12 @@ int	ft_print_str(char	*s)
 	i = 0;
 	if (s == NULL)
 	{
-		write (1, "null", 6);
-		return (6);
+		write (1, "null", 4);
+		return (4);
 	}
 	while (s[i])
 	{
-		wriet (1, &s[i], 1);
+		write (1, &s[i], 1);
 		i++;
 	}
 	return (i);
