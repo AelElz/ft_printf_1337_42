@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putpoint_pf.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aelelz <aelelz@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ael-azha <ael-azha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 18:35:38 by aelelz            #+#    #+#             */
-/*   Updated: 2024/11/17 16:03:27 by aelelz           ###   ########.fr       */
+/*   Updated: 2024/11/17 16:08:14 by ael-azha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ int ft_point_count(unsigned long long num)
 	}
 	return (len);
 }
+
 void    ft_point(unsigned long long num)
 {
 	if (num >= 16)
@@ -39,6 +40,7 @@ void    ft_point(unsigned long long num)
 			ft_putchar_fd(num - 10 + 'a', 1);
 	}
 }
+
 int ft_print_point(unsigned long long num)
 {
 	int print_len;
