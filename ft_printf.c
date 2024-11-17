@@ -6,11 +6,16 @@
 /*   By: aelelz <aelelz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 13:35:50 by ael-azha          #+#    #+#             */
-/*   Updated: 2024/11/16 18:26:31 by aelelz           ###   ########.fr       */
+/*   Updated: 2024/11/17 15:31:27 by aelelz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include "libft.h"
+
+void    ft_check(const char *str, va_list args)
+{   
+}
 
 int	ft_printf(const char *format, ...)
 {
@@ -21,10 +26,11 @@ int	ft_printf(const char *format, ...)
         return (-1);
     va_start(args, format);
     i = 0;
-    while (format[i])
+    while (format[i] != NULL)
     {
         if (format[i] == '%' && format[i] != '\0')
         {
+            i++;
             
         }
     }
