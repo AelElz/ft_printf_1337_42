@@ -6,7 +6,7 @@
 /*   By: aelelz <aelelz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 13:52:01 by aelelz            #+#    #+#             */
-/*   Updated: 2024/11/18 16:01:57 by aelelz           ###   ########.fr       */
+/*   Updated: 2024/11/18 20:38:52 by aelelz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <stdio.h>
-# include "./libft/libft.h"
 
 int		ft_printf(const char *format, ...);
 int		ft_print_hex(unsigned int num, const char format);

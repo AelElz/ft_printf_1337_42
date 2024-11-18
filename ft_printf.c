@@ -6,7 +6,7 @@
 /*   By: aelelz <aelelz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 13:35:50 by ael-azha          #+#    #+#             */
-/*   Updated: 2024/11/18 20:37:32 by aelelz           ###   ########.fr       */
+/*   Updated: 2024/11/18 20:40:49 by aelelz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,21 +37,23 @@ int	ft_checker(const char str, va_list args)
 int	ft_printf(const char *format, ...)
 {
 	va_list	args;
-	int	len_printed = 0;
-	int	i = 0;
+	int		len_printed;
+	int		i;
 
-	va_start(args, format);
+	len_printed = 0;
+	i = 0;
+	va_start (args, format);
 	while (format[i])
 	{
 		if (format[i] == '%')
 		{
 			i++;
-			len_printed += ft_checker(format[i], args); 
+			len_printed += ft_checker (format[i], args);
 		}
 		else
-			len_printed += write(1, &format[i], 1);
+			len_printed += write (1, &format[i], 1);
 		i++;
 	}
-	va_end(args);
-	return len_printed;
+	va_end (args);
+	return (len_printed);
 }
