@@ -6,22 +6,19 @@
 /*   By: aelelz <aelelz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 18:41:04 by aelelz            #+#    #+#             */
-/*   Updated: 2024/11/18 14:34:34 by aelelz           ###   ########.fr       */
+/*   Updated: 2024/11/18 16:34:56 by aelelz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-
-void	ft_putchar(int c)
-{
-	write (1, &c, 1);
-}
 
 int	ft_hex_count(unsigned int num)
 {
 	int	len;
 
 	len = 0;
+	if (num == 0)
+		return (1);
 	while (num != 0)
 	{
 		len++;

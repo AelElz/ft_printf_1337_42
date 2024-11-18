@@ -1,31 +1,23 @@
 # Variables
 NAME = libftprintf.a
 
-LIBFTNAME = libft.a
-
-SRCS = ft_printf.c ft_print_all.c ft_puthex_pf.c \
-       ft_putpoint_pf.c ft_unsigned_pf.c
-
+SRCS = ft_printf.c ft_putchar.c ft_puthex_pf.c \
+       ft_putpoint_pf.c ft_unsigned_pf.c ft_put_nbr.c\
+	   ft_putstr.c
 OBJS = $(SRCS:.c=.o)
 
-CC = gcc
-CFLAGS = -Wall -Wextra -Werror -I./include
-LIBFT = ./libft
+CC = cc
+CFLAGS = -Wall -Wextra -Werror
 
-# Rules
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	$(MAKE) -C $(LIBFT)
-	cp $(LIBFT)/$(LIBFTNAME) $(NAME)
-	ar rc $(NAME) $(OBJS)
+	ar rcs $(NAME) $(OBJS)
 
 clean:
-	$(MAKE) clean -C $(LIBFT)
 	rm -f $(OBJS)
 
 fclean: clean
-	$(MAKE) fclean -C $(LIBFT)
 	rm -f $(NAME)
 
 re: fclean all

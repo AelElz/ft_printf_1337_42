@@ -6,17 +6,11 @@
 /*   By: aelelz <aelelz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 18:35:38 by aelelz            #+#    #+#             */
-/*   Updated: 2024/11/18 15:13:00 by aelelz           ###   ########.fr       */
+/*   Updated: 2024/11/18 16:12:27 by aelelz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-
-int	ft_putchar_pf(int c)
-{
-	write (1, &c, 1);
-	return (1);
-}
 
 int	ft_point_count(unsigned long long num)
 {
@@ -41,9 +35,9 @@ void	ft_point(unsigned long long num)
 	else
 	{
 		if (num <= 9)
-			ft_putchar_pf(num + '0');
+			ft_putchar(num + '0');
 		else
-			ft_putchar_pf(num - 10 + 'a');
+			ft_putchar(num - 10 + 'a');
 	}
 }
 
@@ -52,13 +46,15 @@ int	ft_print_point(unsigned long long num)
 	int	print_len;
 
 	print_len = 0;
-	print_len = print_len + write(1, "0x", 2);
+	if (!num)
+		return (write (1, "0x0", 3));
+	print_len += write(1, "0x", 2);
 	if (num == 0)
 		print_len += write (1, "0", 1);
 	else
 	{
 		ft_point(num);
-		print_len = print_len + ft_point_count(num);
+		print_len += ft_point_count(num);
 	}
 	return (print_len);
 }

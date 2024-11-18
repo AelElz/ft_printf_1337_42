@@ -6,7 +6,7 @@
 /*   By: aelelz <aelelz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 13:52:01 by aelelz            #+#    #+#             */
-/*   Updated: 2024/11/18 14:45:04 by aelelz           ###   ########.fr       */
+/*   Updated: 2024/11/18 16:01:57 by aelelz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,10 @@ int		ft_print_point(unsigned long long num);
 int		ft_point_count(unsigned long long num);
 void	ft_point(unsigned long long num);
 void	ft_check(const char *str, va_list args);
-int		ft_putchar_pf(int c);
-void	ft_putstr_pf(char *s);
+int		ft_putchar(int c);
+int		ft_put_nbr(int nb);
 int		ft_print_str(char *s);
-int		ft_putnbr_pf(int n);
+int		ft_putstr(char *s);
 int		ft_print_per(void);
 int		ft_unsigned_count(unsigned int num);
 char	*ft_unsigned(unsigned int num);
