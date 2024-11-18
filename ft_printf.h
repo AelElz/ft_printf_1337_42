@@ -6,7 +6,7 @@
 /*   By: aelelz <aelelz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 20:32:14 by ael-azha          #+#    #+#             */
-/*   Updated: 2024/11/17 16:26:50 by aelelz           ###   ########.fr       */
+/*   Updated: 2024/11/17 19:18:05 by aelelz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <stdio.h>
-# include "./libft/libft.h"
+#include "./libft/libft.h"
 
 int	ft_printf(const char *format, ...);
 int ft_print_hex(unsigned int num, const char format);
@@ -33,5 +33,8 @@ void	ft_putstr_pf(char *s);
 int	ft_print_str(char *s);
 int	ft_putnbr_pf(int n);
 int	ft_print_per(void);
+int	ft_unsigned_count(unsigned int num);
+char	*ft_unsigned(unsigned int num);
+int	ft_print_unsigned(unsigned int num);
 
 #endif

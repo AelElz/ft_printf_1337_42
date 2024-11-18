@@ -6,11 +6,12 @@
 /*   By: aelelz <aelelz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 15:26:05 by aelelz            #+#    #+#             */
-/*   Updated: 2024/11/17 18:11:07 by aelelz           ###   ########.fr       */
+/*   Updated: 2024/11/17 19:18:13 by aelelz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include <stdlib.h>
 
 int	ft_putchar_pf(int c)
 {

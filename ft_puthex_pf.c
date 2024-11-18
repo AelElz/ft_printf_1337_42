@@ -3,20 +3,26 @@
 /*                                                        :::      ::::::::   */
 /*   ft_puthex_pf.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ael-azha <ael-azha@student.42.fr>          +#+  +:+       +#+        */
+/*   By: aelelz <aelelz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 18:41:04 by aelelz            #+#    #+#             */
-/*   Updated: 2024/11/17 16:07:02 by ael-azha         ###   ########.fr       */
+/*   Updated: 2024/11/18 13:26:35 by aelelz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
+void	ft_putchar(int c)
+{
+	write (1, &c, 1);
+}
 int ft_hex_count(unsigned int num)
 {
 	int len;
 
 	len = 0;
+	if (num == 0)
+		return (1);
 	while (num != 0)
 	{
 		len++;
@@ -24,31 +30,27 @@ int ft_hex_count(unsigned int num)
 	}
 	return (len);
 }
-void    ft_hex(unsigned int num, const char format)
+void    ft_print_digit(unsigned int num, const char format)
 {
-	if (num >= 16)
-	{
-		ft_print_hex(num % 16, format);
-		ft_print_hex(num / 16, format);
-	}
+	if (num <= 9)
+		ft_putchar(num + '0');
 	else
 	{
-		if (num <= 9)
-			ft_putchar_fd(num + '0', 1);
-		else
-		{
-			if (format == 'x')
-				ft_putchar_fd(num + 'a', 1);
-			else if (format == 'X')
-				ft_putchar_fd(num + 'A', 1);
-		}
+		if (format == 'x')
+			ft_putchar(num - 10 + 'a');
+		else if (format == 'X')
+			ft_putchar(num - 10 + 'A');
 	}
 }
 int ft_print_hex(unsigned int num, const char format)
 {
 	if (num == 0)
-		return (write (1, "0", 1));
-	else
-		ft_hex(num , format);
+	{
+		write (1, "0", 1);
+		return (1);
+	}
+	if (num >= 16)
+		ft_print_hex(num / 16, format);
+	ft_print_digit(num % 16, format);
 	return (ft_hex_count(num));
 }

@@ -6,16 +6,17 @@
 /*   By: aelelz <aelelz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 13:35:50 by ael-azha          #+#    #+#             */
-/*   Updated: 2024/11/17 16:53:10 by aelelz           ###   ########.fr       */
+/*   Updated: 2024/11/17 19:24:48 by aelelz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void    ft_checker(va_list args, const char str)
+int	ft_checker(va_list args, const char str)
 {
 	int	x;
 	
+	x = 0;
 	if (str == 'c')
 		x += ft_putchar_pf(va_arg(args, int));
 	else if (str == 'd' || str == 'i')
@@ -28,34 +29,37 @@ void    ft_checker(va_list args, const char str)
 		x += ft_print_point(va_arg(args, unsigned long long));
 	else if (str == '%')
 		x += ft_print_per();
+	else if (str == 'u')
+		x += ft_print_unsigned(va_arg(args , unsigned int));
+	return (x);
 }
 
 int	ft_printf(const char *format, ...)
 {
 	va_list args;
 	int i;
-	int	print;
+	int	len_printed;
 
+	len_printed = 0;
 	if(!format)
 		return (-1);
 	va_start(args, format);
 	i = 0;
-	while (format[i] != NULL)
+	while (format[i])
 	{
-		if (format[i] == '%' && format[i] != '\0')
+		if (format[i] == '%' && format[i + 1] != '\0')
 		{
 			i++;
-			ft_checker(args, format[i]);
+			len_printed += ft_checker(args, format[i]);
 		}
 		else
-			
+		{
+			write (1, &format[i], 1);
+			len_printed++;
+		}
+		i++;
 	}
+	va_end(args);
+	return (len_printed);
 	
 }
-/*
-ft_puthex_pf()
-ft_putnbr_pf()
-ft_putpoint_pf()
-ft_putstr_pf()
-ft_putunsi_pf()
-*/
