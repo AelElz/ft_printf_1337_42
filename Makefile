@@ -4,6 +4,7 @@ NAME = libftprintf.a
 SRCS = ft_printf.c ft_putchar.c ft_puthex_pf.c \
        ft_putpoint_pf.c ft_unsigned_pf.c ft_put_nbr.c\
 	   ft_putstr.c
+
 OBJS = $(SRCS:.c=.o)
 
 CC = cc

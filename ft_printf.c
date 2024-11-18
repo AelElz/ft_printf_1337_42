@@ -6,7 +6,7 @@
 /*   By: aelelz <aelelz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 13:35:50 by ael-azha          #+#    #+#             */
-/*   Updated: 2024/11/18 16:41:22 by aelelz           ###   ########.fr       */
+/*   Updated: 2024/11/18 20:37:32 by aelelz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,32 +33,6 @@ int	ft_checker(const char str, va_list args)
 		x += ft_print_unsigned(va_arg(args, unsigned int));
 	return (x);
 }
-/*int	ft_second_check(const char *str, va_list args, int i, int len_print)
-{
-	int	tracker;
-	
-	while (str[i])
-	{
-		if (str[i] == '%')
-		{
-			i++;
-			tracker = ft_checker(str[i], args);
-			if (tracker == -1)
-				return (-1);
-			len_print += tracker;
-		}
-		else
-		{
-			tracker = write (1, &str[i], 1);
-			if (tracker == -1)
-				return (-1);
-			len_print++;
-		}
-		if (str[i] != '\0')
-			i++;
-	}
-	return (len_print);
-}*/
 
 int	ft_printf(const char *format, ...)
 {
