@@ -6,7 +6,7 @@
 /*   By: aelelz <aelelz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 18:41:04 by aelelz            #+#    #+#             */
-/*   Updated: 2024/11/18 13:26:35 by aelelz           ###   ########.fr       */
+/*   Updated: 2024/11/18 13:50:04 by aelelz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,10 @@ void	ft_putchar(int c)
 {
 	write (1, &c, 1);
 }
-int ft_hex_count(unsigned int num)
+
+int	ft_hex_count(unsigned int num)
 {
-	int len;
+	int	len;
 
 	len = 0;
 	if (num == 0)
@@ -30,7 +31,8 @@ int ft_hex_count(unsigned int num)
 	}
 	return (len);
 }
-void    ft_print_digit(unsigned int num, const char format)
+
+void	ft_print_digit(unsigned int num, const char format)
 {
 	if (num <= 9)
 		ft_putchar(num + '0');
@@ -42,7 +44,8 @@ void    ft_print_digit(unsigned int num, const char format)
 			ft_putchar(num - 10 + 'A');
 	}
 }
-int ft_print_hex(unsigned int num, const char format)
+
+int	ft_print_hex(unsigned int num, const char format)
 {
 	if (num == 0)
 	{

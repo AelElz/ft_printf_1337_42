@@ -3,20 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putpoint_pf.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ael-azha <ael-azha@student.42.fr>          +#+  +:+       +#+        */
+/*   By: aelelz <aelelz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 18:35:38 by aelelz            #+#    #+#             */
-/*   Updated: 2024/11/17 16:08:14 by ael-azha         ###   ########.fr       */
+/*   Updated: 2024/11/18 13:56:45 by aelelz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int ft_point_count(unsigned long long num)
+int	ft_point_count(unsigned long long num)
 {
-	int len;
+	int	len;
 
 	len = 0;
+	if (num == 0)
+		return (1);
 	while (num != 0)
 	{
 		len++;
@@ -25,7 +27,7 @@ int ft_point_count(unsigned long long num)
 	return (len);
 }
 
-void    ft_point(unsigned long long num)
+void	ft_point(unsigned long long num)
 {
 	if (num >= 16)
 	{
@@ -41,9 +43,9 @@ void    ft_point(unsigned long long num)
 	}
 }
 
-int ft_print_point(unsigned long long num)
+int	ft_print_point(unsigned long long num)
 {
-	int print_len;
+	int	print_len;
 
 	print_len = 0;
 	print_len = print_len + write(1, "0x", 2);
@@ -54,5 +56,5 @@ int ft_print_point(unsigned long long num)
 		ft_point(num);
 		print_len = print_len + ft_point_count(num);
 	}
-	return(print_len);
+	return (print_len);
 }

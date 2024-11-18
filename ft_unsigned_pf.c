@@ -6,15 +6,15 @@
 /*   By: aelelz <aelelz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 15:18:06 by aelelz            #+#    #+#             */
-/*   Updated: 2024/11/17 18:57:39 by aelelz           ###   ########.fr       */
+/*   Updated: 2024/11/18 13:58:23 by aelelz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int ft_unsigned_count(unsigned int num)
+int	ft_unsigned_count(unsigned int num)
 {
-	int len;
+	int	len;
 
 	len = 0;
 	while (num != 0)
@@ -24,10 +24,11 @@ int ft_unsigned_count(unsigned int num)
 	}
 	return (len);
 }
+
 char	*ft_unsigned(unsigned int num)
 {
-	char    *str;
-	int     len;
+	char	*str;
+	int		len;
 
 	len = ft_unsigned_count(num);
 	str = (char *)malloc((len + 1) * sizeof(char));
@@ -48,7 +49,7 @@ int	ft_print_unsigned(unsigned int num)
 	int		len;
 	char	*str2;
 
-	len = 0;	
+	len = 0;
 	if (num == 0)
 	{
 		write (1, "0", 1);
