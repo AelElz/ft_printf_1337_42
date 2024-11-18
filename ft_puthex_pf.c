@@ -6,7 +6,7 @@
 /*   By: aelelz <aelelz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 18:41:04 by aelelz            #+#    #+#             */
-/*   Updated: 2024/11/18 13:50:04 by aelelz           ###   ########.fr       */
+/*   Updated: 2024/11/18 14:34:34 by aelelz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,6 @@ int	ft_hex_count(unsigned int num)
 	int	len;
 
 	len = 0;
-	if (num == 0)
-		return (1);
 	while (num != 0)
 	{
 		len++;
@@ -52,7 +50,7 @@ int	ft_print_hex(unsigned int num, const char format)
 		write (1, "0", 1);
 		return (1);
 	}
-	if (num >= 16)
+	else if (num >= 16)
 		ft_print_hex(num / 16, format);
 	ft_print_digit(num % 16, format);
 	return (ft_hex_count(num));

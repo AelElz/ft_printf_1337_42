@@ -6,7 +6,7 @@
 /*   By: aelelz <aelelz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 15:26:05 by aelelz            #+#    #+#             */
-/*   Updated: 2024/11/17 19:18:13 by aelelz           ###   ########.fr       */
+/*   Updated: 2024/11/18 14:45:29 by aelelz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,18 +17,6 @@ int	ft_putchar_pf(int c)
 {
 	write (1, &c, 1);
 	return (1);
-}
-
-void	ft_putstr_pf(char *s)
-{
-	int	i;
-
-	i = 0;
-	while (s[i])
-	{
-		write (1, &s[i], 1);
-		i++;
-	}
 }
 
 int	ft_print_str(char	*s)

@@ -6,19 +6,23 @@
 /*   By: aelelz <aelelz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 18:35:38 by aelelz            #+#    #+#             */
-/*   Updated: 2024/11/18 13:56:45 by aelelz           ###   ########.fr       */
+/*   Updated: 2024/11/18 15:13:00 by aelelz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+
+int	ft_putchar_pf(int c)
+{
+	write (1, &c, 1);
+	return (1);
+}
 
 int	ft_point_count(unsigned long long num)
 {
 	int	len;
 
 	len = 0;
-	if (num == 0)
-		return (1);
 	while (num != 0)
 	{
 		len++;
@@ -37,9 +41,9 @@ void	ft_point(unsigned long long num)
 	else
 	{
 		if (num <= 9)
-			ft_putchar_fd(num + '0', 1);
+			ft_putchar_pf(num + '0');
 		else
-			ft_putchar_fd(num - 10 + 'a', 1);
+			ft_putchar_pf(num - 10 + 'a');
 	}
 }
 

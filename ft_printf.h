@@ -6,7 +6,7 @@
 /*   By: aelelz <aelelz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 13:52:01 by aelelz            #+#    #+#             */
-/*   Updated: 2024/11/18 13:55:10 by aelelz           ###   ########.fr       */
+/*   Updated: 2024/11/18 14:45:04 by aelelz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <stdarg.h>
 # include <unistd.h>
 # include <stdlib.h>
+# include <stdio.h>
 # include "./libft/libft.h"
 
 int		ft_printf(const char *format, ...);
