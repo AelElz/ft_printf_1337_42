@@ -6,7 +6,7 @@
 /*   By: aelelz <aelelz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 18:35:38 by aelelz            #+#    #+#             */
-/*   Updated: 2024/11/18 16:12:27 by aelelz           ###   ########.fr       */
+/*   Updated: 2024/11/19 18:36:25 by aelelz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,15 +46,8 @@ int	ft_print_point(unsigned long long num)
 	int	print_len;
 
 	print_len = 0;
-	if (!num)
-		return (write (1, "0x0", 3));
-	print_len += write(1, "0x", 2);
-	if (num == 0)
-		print_len += write (1, "0", 1);
-	else
-	{
-		ft_point(num);
-		print_len += ft_point_count(num);
-	}
+	print_len += write (1, "0x", 2);
+	ft_point(num);
+	print_len += ft_point_count(num);
 	return (print_len);
 }
