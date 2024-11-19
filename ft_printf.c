@@ -6,7 +6,7 @@
 /*   By: aelelz <aelelz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 13:35:50 by ael-azha          #+#    #+#             */
-/*   Updated: 2024/11/19 18:38:34 by aelelz           ###   ########.fr       */
+/*   Updated: 2024/11/19 20:38:47 by aelelz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,8 @@ int	ft_printf(const char *format, ...)
 	len_printed = 0;
 	i = 0;
 	va_start (args, format);
+	if (write (1, 0, 0) == -1)
+		return (-1);
 	while (format[i])
 	{
 		if (format[i] == '%')
